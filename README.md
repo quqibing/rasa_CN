@@ -86,24 +86,24 @@ TIANAPI_KEY=
 
 ~~~shell
 # 新建环境
-conda create -n py38_rasa python=3.8
-conda activate py38_rasa 
+conda create -n rasacn python=3.10
+conda activate rasacn 
+
 # 安装MITIE
 cd ..
 git clone https://github.com/mit-nlp/MITIE.git  
 cd MITIE
 pip install -e .
+
 # 安装依赖
-# 把requirements.txt里的mitie一行git+都去掉，只保留mitie
-# py2neo版本去掉
-# 删除rasa-x一行
+
 cd ..\rasa_CN\
-pip install -r .\requirements.txt
+pip install -r .\requirements_py310.txt
 ~~~
 
 ### 下载模型
 
-从<https://huggingface.co/bert-base-chinese/tree/main>下载除：
+从<https://huggingface.co/bert-base-chinese/tree/main>下载除了：
 
 - flax_model.msgpack
 - model.safetensors
