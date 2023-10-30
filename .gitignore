@@ -10,7 +10,6 @@ log
 /web
 /extra
 *.pyc
-__pycache__/
 *.py[cod]
 *$py.class
 
@@ -26,3 +25,4 @@ message/
 .chroma
 tracker_store.db
 rasa.log
+**/__pycache__
