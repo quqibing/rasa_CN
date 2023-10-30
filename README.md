@@ -79,17 +79,55 @@ TIANAPI_KEY=
 
 </h3>
 
-## 依赖安装
 
-`pip install -r requirements.txt`
+## 安装记录
 
-## 训练
+### 安装依赖
 
-`rasa train --domain domain`
+~~~shell
+# 新建环境
+conda create -n py38_rasa python=3.8
+conda activate py38_rasa 
+# 安装MITIE
+cd ..
+git clone https://github.com/mit-nlp/MITIE.git  
+cd MITIE
+pip install -e .
+# 安装依赖
+# 把requirements.txt里的mitie一行git+都去掉，只保留mitie
+# py2neo版本去掉
+# 删除rasa-x一行
+cd ..\rasa_CN\
+pip install -r .\requirements.txt
+~~~
 
-### 多线程训练
+### 下载模型
 
-`rasa train --domain domain --num-threads 12`
+从<https://huggingface.co/bert-base-chinese/tree/main>下载除：
+
+- flax_model.msgpack
+- model.safetensors
+- pytorch_model.bin
+
+外的所有文件，也可以都下载。
+
+放入rasa_CN\pipeline\bert-base-chinese目录下。
+
+### 训练模型
+
+执行训练模型命令：
+
+~~~shell
+rasa train --domain domain --num-threads 8
+~~~
+
+线程数和cpu核数一致即可。
+
+### 运行
+
+~~~shell
+python server/start_services.py 
+~~~~
 
 ## 开启 action 服务器
 
