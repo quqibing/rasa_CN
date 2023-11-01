@@ -1,9 +1,9 @@
 <h1 align="center">基于RASA的中文任务型机器人</h1>
 <div align="center">
 
-[![Static Badge](https://img.shields.io/badge/rasa-3.6.9-blue)](https://github.com/RasaHQ/rasa)
-[![Static Badge](https://img.shields.io/badge/rasa--sdk-3.6.2-blue)](https://github.com/RasaHQ/rasa)
-![Static Badge](https://img.shields.io/badge/python-3.8-orange)
+[![Static Badge](https://img.shields.io/badge/rasa-3.6.13-blue)](https://github.com/RasaHQ/rasa)
+[![Static Badge](https://img.shields.io/badge/rasa--sdk-3.6.13-blue)](https://github.com/RasaHQ/rasa)
+![Static Badge](https://img.shields.io/badge/python-3.10-orange)
 
 ![Static Badge](https://img.shields.io/badge/tensorflow-2.12.0-8A2BE2)
 ![Static Badge](https://img.shields.io/badge/sanic-21.12.2-8A2BE2)
@@ -98,7 +98,7 @@ pip install -e .
 # 安装依赖
 
 cd ..\rasa_CN\
-pip install -r .\requirements_py310.txt
+pip install -r .\requirements-py310.txt
 ~~~
 
 ### 下载模型
